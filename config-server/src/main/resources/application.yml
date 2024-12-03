@@ -4,13 +4,12 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active: native
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+        git:
+          uri: file:///C:\Users\yimj5\Desktop\YJS\241203\config-repo # 로컬 Git 저장소 위치
+          default-label: main
 
 eureka:
   client:
